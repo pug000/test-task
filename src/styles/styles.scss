@@ -1,7 +1,32 @@
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("assets/fonts/Montserrat/Montserrat-Bold.ttf") format("tff");
+}
+
+@font-face {
+  font-family: "Montserrat SemiBold";
+  src: url("assets/fonts/Montserrat/Montserrat-SemiBold.ttf") format("tff");
+}
+
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url("assets/fonts/Montserrat/Montserrat-Medium.ttf") format("tff");
+}
+
 *,
 *::after,
 *::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1c1c1e;
+}
+
+.main {
+  max-width: 1440px;
+  margin: 0 auto;
 }
