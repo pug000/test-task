@@ -6,7 +6,7 @@ import TablesIcon from 'components/Icons/TablesIcon';
 import CalendarIcon from 'components/Icons/CalendarIcon';
 import MapIcon from 'components/Icons/MapIcon';
 
-import NavItem from 'ts/interfaces';
+import { NavItem } from 'ts/interfaces';
 import WidgetsIcon from 'components/Icons/WidgetsIcon';
 import SettingsProfileIcon from 'components/Icons/SettingsProfileIcon';
 import FinancialIcon from 'components/Icons/FinancialIcon';
@@ -65,4 +65,8 @@ const accordionItems: NavItem[] = [
   },
 ];
 
-export { navItems, accordionItems };
+const baseUrl = 'https://suggestions.dadata.ru/';
+
+const apiKey = '93403bf406ebe24d219508182771b47750495b3f';
+
+export { navItems, accordionItems, baseUrl, apiKey };

@@ -7,7 +7,7 @@ import { setBurgerMenuShown } from 'redux/slices/menuSlice';
 
 import ArrowIcon from 'components/Icons/ArrowIcon';
 
-import NavItem from 'ts/interfaces';
+import { NavItem } from 'ts/interfaces';
 
 import styles from './Accordion.module.scss';
 
