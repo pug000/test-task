@@ -1,9 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
+
 import addressApi from './services/addressService';
 import menuSlice from './slices/menuSlice';
+import querySlice from './slices/querySlice';
 
 const rootReducer = combineReducers({
   menu: menuSlice,
+  query: querySlice,
   [addressApi.reducerPath]: addressApi.reducer,
 });
 
