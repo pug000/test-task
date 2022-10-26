@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+
+import { useAppDispatch, useAppSelector } from 'hooks/useRedux';
+
+import { setBurgerMenuShown } from 'redux/slices/menuSlice';
 
 import ArrowIcon from 'components/Icons/ArrowIcon';
 
 import NavItem from 'ts/interfaces';
 
-import { NavLink } from 'react-router-dom';
 import styles from './Accordion.module.scss';
 
 interface AccordionProps {
@@ -15,6 +19,15 @@ interface AccordionProps {
 
 function Accordion({ accordionText, accordionIcon, items }: AccordionProps) {
   const [isContentShown, setContentShown] = useState(false);
+
+  const { isBurgerMenuShown } = useAppSelector((state) => state.menu);
+  const dispatch = useAppDispatch();
+
+  const closeBurgerMenuOnClick = useCallback(() => {
+    if (isBurgerMenuShown) {
+      dispatch(setBurgerMenuShown(false));
+    }
+  }, [isBurgerMenuShown]);
 
   return (
     <div className={styles.accordion}>
@@ -41,7 +54,12 @@ function Accordion({ accordionText, accordionIcon, items }: AccordionProps) {
         <ul className={styles.accordionContent}>
           {items.map(({ id, icon, path, text }) => (
             <li className={styles.accordionContentList} key={id}>
-              <NavLink end to={path} className={styles.accordionContentLink}>
+              <NavLink
+                end
+                to={path}
+                className={styles.accordionContentLink}
+                onClick={closeBurgerMenuOnClick}
+              >
                 <div className={styles.accordionContentIconWrapper}>{icon}</div>
                 <p className={styles.accordionContentLinkText}>{text}</p>
               </NavLink>

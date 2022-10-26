@@ -1,4 +1,7 @@
 .burgerMenu {
+  display: flex;
+  flex-direction: column;
+
   &Overlay {
     position: fixed;
     top: 0;
@@ -6,12 +9,17 @@
     width: 100vw;
     height: 100vh;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #000000;
     transition: all 0.5s ease-in-out;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
 
     &.active {
-      display: flex;
+      @media screen and (max-width: 768px) {
+        opacity: 0.4;
+        pointer-events: all;
+      }
     }
   }
 
@@ -27,6 +35,11 @@
     z-index: 15;
     transition: all 0.5s ease-in-out;
     transform: translateX(-100%);
-    padding: 15px;
+
+    &.active {
+      @media screen and (max-width: 768px) {
+        transform: translateX(0%);
+      }
+    }
   }
 }
