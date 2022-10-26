@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   width: 300px;
   height: calc(100vh - 80px);
 

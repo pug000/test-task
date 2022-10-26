@@ -12,7 +12,8 @@
   }
 
   &TextWrapper {
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -27,6 +28,7 @@
       border-radius: 6px 0 0 6px;
       border: 6px solid #4f27bf;
     }
+
     .homeText {
       padding-right: 25px;
     }

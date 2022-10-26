@@ -1,8 +1,12 @@
+import React from 'react';
+
+import { useAppSelector } from 'hooks/useRedux';
+
+import { useFetchingAddressesQuery } from 'redux/services/addressService';
+
 import Loader from 'components/Loader/Loader';
 import NoResult from 'components/NoResult/NoResult';
-import { useAppSelector } from 'hooks/useRedux';
-import React from 'react';
-import { useFetchingAddressesQuery } from 'redux/services/addressService';
+
 import getRandomNumber from 'utils/functions';
 
 import styles from './Address.module.scss';
