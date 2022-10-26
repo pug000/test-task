@@ -1,0 +1,14 @@
+.address {
+  padding: 32px 0 32px 32px;
+  width: 100%;
+
+  &Title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 16px;
+  }
+
+  &Subtitle {
+    margin-bottom: 24px;
+  }
+}
