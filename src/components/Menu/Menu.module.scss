@@ -7,6 +7,15 @@
   width: 300px;
   height: calc(100vh - 80px);
 
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px 0 0 6px;
+    border: 6px solid rgb(28, 28, 30, 0.2);
+  }
+
   &Title {
     font-size: 20px;
     line-height: 24px;
