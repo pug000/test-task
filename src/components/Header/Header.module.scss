@@ -2,7 +2,6 @@
   background-color: #4f27bf;
   height: 80px;
   display: flex;
-  color: #ffffff;
 
   &Container {
     max-width: 1440px;
@@ -16,6 +15,8 @@
     .headerLogo {
       display: flex;
       align-items: center;
+      color: #ffffff;
+      text-decoration: none;
 
       &Title {
         padding-left: 26px;
@@ -35,6 +36,7 @@
           font-size: 20px;
           line-height: 24px;
           font-family: "Montserrat Bold", sans-serif;
+          color: #ffffff;
         }
       }
     }
