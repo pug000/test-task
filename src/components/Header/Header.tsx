@@ -48,14 +48,14 @@ function Header() {
             <h1 className={styles.headerLogoTitle}>Wrench CRM</h1>
           </NavLink>
         </div>
-        <div className={styles.headerContainerRightSide}>
+        <NavLink to="/profile" className={styles.headerContainerRightSide}>
           <div className={styles.headerProfileIconWrapper}>
             <ProfileIcon />
           </div>
           <div className={styles.headerProfileWrapper}>
             <p className={styles.headerProfileText}>Имя Фамилия</p>
           </div>
-        </div>
+        </NavLink>
       </div>
     </header>
   );
