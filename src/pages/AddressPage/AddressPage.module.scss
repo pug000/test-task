@@ -1,6 +1,7 @@
 .address {
-  padding: 32px 0 32px 32px;
+  padding: 32px;
   width: 100%;
+  height: calc(100vh - 80px);
 
   &Title {
     font-size: 26px;
