@@ -3,8 +3,6 @@
   height: 80px;
   display: flex;
   color: #ffffff;
-  font-family: "Montserrat Bold", sans-serif;
-  font-weight: 700;
 
   &Container {
     max-width: 1440px;
@@ -24,6 +22,7 @@
         font-size: 20px;
         line-height: 24px;
         letter-spacing: 1px;
+        font-weight: 700;
       }
     }
 
@@ -38,6 +37,7 @@
           font-size: 20px;
           line-height: 24px;
           letter-spacing: 1px;
+          font-weight: 700;
         }
       }
     }
