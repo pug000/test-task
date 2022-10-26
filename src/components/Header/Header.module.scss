@@ -23,7 +23,7 @@
     &LeftSide {
       display: flex;
       gap: 30px;
-      flex: 0 1 100%;
+      align-items: center;
 
       @media screen and (max-width: 580px) {
         & {
@@ -32,9 +32,8 @@
       }
 
       .headerBurgerMenu {
-        max-width: 40px;
+        width: 40px;
         height: 40px;
-        width: 100%;
         cursor: pointer;
         user-select: none;
         background-color: transparent;
@@ -91,6 +90,10 @@
         z-index: 10;
 
         &IconWrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
           @media screen and (max-width: 580px) {
             svg {
               max-width: 40px;
@@ -119,6 +122,10 @@
       align-items: center;
 
       .headerProfileIconWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         @media screen and (max-width: 580px) {
           svg {
             max-width: 40px;
