@@ -83,12 +83,13 @@ interface Data {
   fias_level: string;
   fias_actuality_state: string;
   kladr_id: string;
+
   geoname_id: string;
   capital_marker: string;
   okato: string;
   oktmo: string;
-  tax_office: string;
-  tax_office_legal: string;
+  tax_office: string | null;
+  tax_office_legal: string | null;
   timezone?: string | null;
   geo_lat?: string | null;
   geo_lon?: string | null;
@@ -99,7 +100,7 @@ interface Data {
   qc_geo: string;
   qc_complete?: string | null;
   qc_house?: string | null;
-  history_values?: string | null;
+  history_values?: string[] | null;
   unparsed_parts?: string | null;
   source?: string | null;
   qc?: string | null;
