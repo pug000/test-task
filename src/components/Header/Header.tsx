@@ -14,8 +14,14 @@ function Header() {
   const { isBurgerMenuShown } = useAppSelector((state) => state.menu);
   const dispatch = useAppDispatch();
 
-  const toggleBurgerMenu = useCallback(() => {
+  const toggleBurgerMenuOnClick = useCallback(() => {
     dispatch(setBurgerMenuShown(!isBurgerMenuShown));
+  }, [isBurgerMenuShown]);
+
+  const closeBurgerMenuOnClick = useCallback(() => {
+    if (isBurgerMenuShown) {
+      dispatch(setBurgerMenuShown(false));
+    }
   }, [isBurgerMenuShown]);
 
   return (
@@ -29,13 +35,13 @@ function Header() {
                 ? `${styles.headerBurgerMenu} ${styles.active}`
                 : `${styles.headerBurgerMenu}`
             }
-            onClick={toggleBurgerMenu}
+            onClick={toggleBurgerMenuOnClick}
           >
             <span className={styles.burgerMenuLine} />
             <span className={styles.burgerMenuLine} />
             <span className={styles.burgerMenuLine} />
           </button>
-          <NavLink end to="/" className={styles.headerLogo}>
+          <NavLink end to="/" className={styles.headerLogo} onClick={closeBurgerMenuOnClick}>
             <div className={styles.headerLogoIconWrapper}>
               <LogoIcon />
             </div>
