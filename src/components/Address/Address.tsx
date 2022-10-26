@@ -1,3 +1,4 @@
+import NoResult from 'components/NoResult/NoResult';
 import { useAppSelector } from 'hooks/useRedux';
 import React from 'react';
 import { useFetchingAddressesQuery } from 'redux/services/addressService';
@@ -8,6 +9,10 @@ import styles from './Address.module.scss';
 function Address() {
   const { query } = useAppSelector((state) => state.query);
   const { data: suggestions } = useFetchingAddressesQuery(query);
+
+  if (query && !suggestions?.length) {
+    return <NoResult />;
+  }
 
   return (
     <div className={styles.addressWrapper}>
