@@ -1,3 +1,4 @@
+import BurgerMenu from 'components/BurgerMenu/BurgerMenu';
 import Header from 'components/Header/Header';
 import Menu from 'components/Menu/Menu';
 import React from 'react';
@@ -15,6 +16,7 @@ function AppLayout() {
         </div>
         <Outlet />
       </main>
+      <BurgerMenu />
     </>
   );
 }
