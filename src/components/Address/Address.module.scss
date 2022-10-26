@@ -26,6 +26,11 @@
         cursor: pointer;
         transition: 0.5s all ease-out;
 
+        &Link {
+          color: #1c1c1e;
+          text-decoration: none;
+        }
+
         &:hover {
           opacity: 0.6;
         }

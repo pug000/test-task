@@ -40,11 +40,17 @@ function Address() {
                 data.street ?? data.city_district ?? data.area ?? data.settlement ?? '';
               const streetNumber = getRandomNumber(1, 99);
               const houseNumber = getRandomNumber(1, 150);
+              const text = `${region} ${regionName}${street ? `, ${street}` : ''} ${
+                streetName ? `${streetName} ${streetNumber}, дом ${houseNumber}` : ''
+              }`;
               return (
                 <div className={styles.addressItem} key={data.fias_id}>
-                  <p className={styles.addressItemText}>{`${region} ${regionName}${
-                    street ? `, ${street}` : ''
-                  } ${streetName ? `${streetName} ${streetNumber}, дом ${houseNumber}` : ''} `}</p>
+                  <a
+                    href={`mailto:roman.troshin98@gmail.com?body=${text}`}
+                    className={styles.addressItemLink}
+                  >
+                    {text}
+                  </a>
                 </div>
               );
             })}
