@@ -1,3 +1,4 @@
+import Loader from 'components/Loader/Loader';
 import NoResult from 'components/NoResult/NoResult';
 import { useAppSelector } from 'hooks/useRedux';
 import React from 'react';
@@ -8,7 +9,13 @@ import styles from './Address.module.scss';
 
 function Address() {
   const { query } = useAppSelector((state) => state.query);
-  const { data: suggestions } = useFetchingAddressesQuery(query);
+  const { data: suggestions, isLoading: isLoadingAddresses } = useFetchingAddressesQuery(query, {
+    skip: query.length < 3,
+  });
+
+  if (isLoadingAddresses) {
+    return <Loader />;
+  }
 
   if (query && !suggestions?.length) {
     return <NoResult />;
