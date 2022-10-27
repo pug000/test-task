@@ -1,0 +1,36 @@
+.home {
+  padding: 32px 0 32px 32px;
+
+  &Title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 16px;
+  }
+
+  &Subtitle {
+    margin-bottom: 24px;
+  }
+
+  &TextWrapper {
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 75vh;
+    padding-bottom: 20px;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 6px 0 0 6px;
+      border: 6px solid #4f27bf;
+    }
+
+    .homeText {
+      padding-right: 25px;
+    }
+  }
+}

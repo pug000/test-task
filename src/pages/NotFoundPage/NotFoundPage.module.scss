@@ -1,0 +1,33 @@
+.notFoundPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  height: 50vh;
+
+  &Title {
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  &Button {
+    background-color: #4f27bf;
+    border: none;
+    padding: 19px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 26px;
+    line-height: 32px;
+    color: #ffffff;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    font-family: "Montserrat Medium", sans-serif;
+
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.addressWrapper {
+  display: flex;
+  flex-direction: column;
+
+  .address {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 8px rgb(2 0 97 / 25%);
+    border-radius: 10px;
+    padding: 24px 24px 0;
+
+    &.hidden {
+      display: none;
+    }
+
+    &Title {
+      font-size: 26px;
+      line-height: 32px;
+      margin-bottom: 16px;
+    }
+
+    &ItemWrapper {
+      .addressItem {
+        padding: 15px 0 16px;
+        border-top: 1px solid #d7d7d7;
+        cursor: pointer;
+        transition: 0.5s all ease-out;
+
+        &Link {
+          color: #1c1c1e;
+          text-decoration: none;
+        }
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}

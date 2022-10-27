@@ -1,0 +1,26 @@
+.addressPage {
+  padding: 32px;
+  width: 100%;
+  height: calc(100vh - 80px);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px 0 0 6px;
+    border: 6px solid #4f27bf;
+  }
+
+  &Title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 16px;
+  }
+
+  &Subtitle {
+    margin-bottom: 24px;
+  }
+}
